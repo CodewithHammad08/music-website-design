@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url(img.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px solid white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            text-align: center;
+            width: 350px;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+        }
+        .login-box input[type="submit"] {
+            padding: 10px 40px;
+            border: none;
+            background: white;
+            color: #4e44ce;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .login-box input[type="submit"]:hover {
+            background: #ddd;
+        }
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .remember {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <input type="text" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <div class="remember">
+                <input type="checkbox" name="remember"> Remember me
+                <a style="float: right;" href="#">Forgot password?</a>
+            </div><br>
+            <input type="submit" value="Login"><br><br>
+            Don't have an account? <a href="registration.html">Register</a>
+        </form>
+    </div>
+</body>
+</html>
